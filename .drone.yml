@@ -12,8 +12,8 @@ pipeline:
   build_project1_test:
     image: plugins/docker
     dockerfile: project1/Dockerfile
-    registry: docker.c.ehe.io
-    repo: docker.c.ehe.io/test1/${DRONE_REPO_NAME}_project1
+    registry: registry.cn-hangzhou.aliyuncs.com
+    repo: registry.cn-hangzhou.aliyuncs.com/go_test/project1
     insecure: true
     secrets: [ docker_username, docker_password ]
     tags:
@@ -26,8 +26,8 @@ pipeline:
   build_project1_prod:
     image: plugins/docker
     dockerfile: project1/Dockerfile
-    registry: docker.c.ehe.io
-    repo: docker.c.ehe.io/test1/${DRONE_REPO_NAME}_project1
+    registry: registry.cn-hangzhou.aliyuncs.com
+    repo: registry.cn-hangzhou.aliyuncs.com/go_test/project1
     insecure: true
     secrets: [ docker_username, docker_password ]
     tags:
@@ -41,7 +41,7 @@ pipeline:
     image: plugins/docker
     dockerfile: project2/Dockerfile
     registry: docker.c.ehe.io
-    repo: docker.c.ehe.io/test1/${DRONE_REPO_NAME}_project2
+    repo: registry.cn-hangzhou.aliyuncs.com/go_test/project2
     insecure: true
     secrets: [ docker_username, docker_password ]
     tags:
@@ -54,8 +54,8 @@ pipeline:
   build_project2_prod:
     image: plugins/docker
     dockerfile: project2/Dockerfile
-    registry: docker.c.ehe.io
-    repo: docker.c.ehe.io/test1/${DRONE_REPO_NAME}_project2
+    registry: registry.cn-hangzhou.aliyuncs.com
+    repo: registry.cn-hangzhou.aliyuncs.com/go_test/project2
     insecure: true
     secrets: [ docker_username, docker_password ]
     tags:
