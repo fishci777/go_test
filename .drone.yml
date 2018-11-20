@@ -51,7 +51,7 @@ pipeline:
       event: push
       branch: master
 
-  build_project2_test:
+  build_project2_prod:
     image: plugins/docker
     dockerfile: project2/Dockerfile
     registry: docker.c.ehe.io
