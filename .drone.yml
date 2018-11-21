@@ -2,6 +2,12 @@ workspace:
   base: /go
   path: src/app
 
+clone:
+  git:
+    image: plugins/git
+  commands:
+    - git clone https://github.com/Bytom/bytom.git /go/src/github.com/bytom
+
 pipeline:
   pr_test:
     image: golang:1.9-alpine
@@ -17,7 +23,7 @@ pipeline:
     insecure: true
     secrets: [ docker_username, docker_password ]
     tags:
-      - "${DRONE_COMMIT_SHA:0:6}"
+      - "${DRONE_COMMIT_SHA:0:7}"
       - latest
     when:
       event: push
@@ -40,12 +46,12 @@ pipeline:
   build_project2_test:
     image: plugins/docker
     dockerfile: project2/Dockerfile
-    registry: docker.c.ehe.io
+    registry: registry.cn-hangzhou.aliyuncs.com
     repo: registry.cn-hangzhou.aliyuncs.com/go_test/project2
     insecure: true
     secrets: [ docker_username, docker_password ]
     tags:
-      - "${DRONE_COMMIT_SHA:0:6}"
+      - "${DRONE_COMMIT_SHA:0:7}"
       - latest
     when:
       event: push

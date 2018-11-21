@@ -1,0 +1,12 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "m8B3L3qJ3tFfP6BI9pIFr9oal3w=",
+			"path": "github.com/gorhill/cronexpr",
+			"revision": ""
+		}
+	],
+	"rootPath": "github.com/go_test"
+}
