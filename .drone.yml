@@ -10,7 +10,7 @@ pipeline:
   clone_bytom:
     image: docker:git
     commands:
-      - git clone https://github.com/Bytom/bytom.git /go/src/github.com/bytom
+      - git clone https://github.com/Bytom/bytom.git /go/src/github.com/app/vendor/bytom
 
   unit_test:
     image: golang:1.9-alpine

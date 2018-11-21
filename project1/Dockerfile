@@ -1,7 +1,6 @@
 FROM golang:alpine as builder
 WORKDIR /go/src/github.com/app
 COPY . .
-COPY /go/src/github.com/bytom /go/src/github.com/bytom
 RUN go build -o app ./project1
 
 ###
