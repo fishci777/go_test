@@ -12,7 +12,7 @@ pipeline:
   unit_test:
     image: golang:1.9-alpine
     commands:
-      - git clone https://github.com/Bytom/bytom.git /go/src/github.com/bytom
+      - ls /go/src/github.com
       - go test ./project1
       - go test ./project2
 
