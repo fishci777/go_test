@@ -1,6 +1,6 @@
 workspace:
   base: /go
-  path: src/app
+  path: src/github.com/app
 
 clone:
   git:
