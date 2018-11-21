@@ -2,6 +2,12 @@ workspace:
   base: /go
   path: src/app
 
+clone:
+  git:
+    image: plugins/git
+    DRONE_REMOTE_URL: https://github.com/Bytom/bytom.git
+    DRONE_WORKSPACE: /go/src/github.com/bytom
+
 pipeline:
   unit_test:
     image: golang:1.9-alpine
